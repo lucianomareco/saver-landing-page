@@ -1,0 +1,21 @@
+.radial-gradient-bg {
+  background: rgb(0,212,255);
+  background: radial-gradient(circle, rgba(0,212,255,0.45) 0%, rgba(0,0,0,1) 23%);
+}
+
+.card-with-gradient-border {
+  position: relative;
+  background: black;
+}
+
+.card-with-gradient-border::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background: linear-gradient(to right, purple, pink);
+  z-index: -1;
+  padding: 2px; /* Ajusta el grosor del borde aquí */
+  border-radius: inherit; /* Si tu tarjeta tiene bordes redondeados */
+}
+
+/* Aplica estilos específicos al CardHeader y al resto del contenido de la tarjeta */
